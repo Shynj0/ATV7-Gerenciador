@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "es2016",          // Ou "es6". Define a versão do JS gerado.
+    "module": "commonjs",        // OBRIGATÓRIO para funcionar com Node padrão.
+    "rootDir": "./src",          // Onde está seu código.
+    "outDir": "./dist",          // Onde fica o código compilado (boa prática).
+    "esModuleInterop": true,     // PERMITE fazer "import express from 'express'".
+    "strict": true,              // Ativa verificações de erro.
+    "skipLibCheck": true         // Pula verificação de arquivos de definição (evita erros bobos).
+  }
+}

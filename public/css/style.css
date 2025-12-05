@@ -1,0 +1,155 @@
+:root {
+    --primary-color: #ff8c00; /* Laranja Escuro Principal */
+    --secondary-color: #ffb84d; /* Laranja Mais Claro para Botões/Ações */
+    --background-light: #fff8f0; /* Fundo Quase Branco */
+    --text-color: #333;
+    --error-color: #dc3545; /* Vermelho Padrão */
+    --border-color: #ff9933;
+    --cancel-color: #6c757d; /* Cinza para Cancelar */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 30px;
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: var(--background-light);
+    color: var(--text-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+h1, h3 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo para a Div do Formulário */
+div[style*="background: #e9ecef"] {
+    background: #ffffff; /* Fundo branco ou muito claro para contraste */
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: flex; /* Usa Flexbox para colocar inputs lado a lado */
+    gap: 15px; /* Espaçamento entre os inputs */
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+/* Estilo para todos os inputs dentro de .input-group */
+.input-group input[type="text"], 
+.input-group input[type="date"],
+.input-group input[type="number"] {
+    flex-grow: 1; /* Faz os inputs ocuparem o espaço disponível igualmente */
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box; /* Inclui padding e borda na largura/altura total */
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+/* Ajuste para o campo de descrição ou busca (full-width) */
+.full-width {
+    width: 100% !important; /* Força 100% de largura dentro do seu container */
+    margin-right: 0 !important; /* Remove margem direita desnecessária */
+}
+
+/* Estilo dos Botões */
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.1s;
+    margin-right: 10px;
+}
+
+#btnSalvar {
+    background: var(--primary-color);
+    color: white;
+}
+
+#btnSalvar:hover {
+    background: var(--secondary-color);
+    transform: translateY(-1px);
+}
+
+/* Estilo para o botão "Cancelar" (usando o estilo inline #ccc no HTML) */
+button[style*="background: #ccc"] {
+    background: var(--cancel-color) !important; 
+    color: white;
+}
+
+button[style*="background: #ccc"]:hover {
+    background: #5a6268 !important;
+    transform: translateY(-1px);
+}
+
+/* Linha Divisória */
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), var(--primary-color), rgba(0, 0, 0, 0));
+    margin: 30px 0;
+}
+
+/* Estilo da Lista de Eventos (ul) */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Estilo de cada Item da Lista (li) */
+li {
+    background: #ffffff;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 5px solid var(--primary-color); /* Destaque laranja */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.3s;
+}
+
+li:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-group button {
+    margin-left: 8px;
+    /* Estilos adicionais para botões de ação na lista (Editar/Excluir) */
+    background: #f0ad4e; /* Laranja um pouco mais suave para ações */
+    color: white;
+    padding: 6px 12px;
+}
+
+.btn-group button:hover {
+    background: #ec971f;
+}
+
+.erro {
+    color: var(--error-color);
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Estilo da Busca */
+#busca {
+    margin-bottom: 20px;
+}

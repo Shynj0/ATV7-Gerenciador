@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gerenciador de Eventos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <h1>Meus Eventos</h1>
+
+    <div style="background: #e9ecef; padding: 15px; border-radius: 5px;">
+        <h3 id="tituloForm">Novo Evento</h3>
+
+        <div class="input-group">
+            <input type="text" id="titulo" placeholder="Título do Evento" required>
+            <input type="text" id="local" placeholder="Local" required>
+        </div>
+
+        <div class="input-group">
+            <input type="date" id="data" required>
+            <input type="number" id="valor" placeholder="Valor (R$)" required>
+        </div>
+
+        <div class="input-group">
+            <input type="text" id="descricao" class="full-width" placeholder="Descrição (Opcional)">
+        </div>
+
+        <button id="btnSalvar" onclick="salvarEvento()">Salvar Evento</button>
+        <button onclick="limparFormulario()" style="background: #ccc;">Cancelar</button>
+        <p id="mensagem" class="erro"></p>
+    </div>
+
+    <hr>
+
+    <h3>Lista de Eventos</h3>
+    <input type="text" id="busca" placeholder="Pesquisar por título..." onkeyup="carregarEventos()" class="full-width">
+    <ul id="lista"></ul>
+
+    <script src="js/script.js" defer></script>
+</body>
+
+</html>
